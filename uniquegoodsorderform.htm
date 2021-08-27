@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>Unique Goods Order Form</title>
+<center>
+
+<STYLE TYPE="text/css"> 
+<!-- 
+BODY { background-image: url(brown4.jpg) }
+BODY { background-repeat: repeat }
+BODY { background-position: center }
+-->
+</STYLE>
+<body>
+
+<img src=orderformlogo.png height=125 width=600><br>
+
+<br><br>
+<table border=1>
+<tr>
+<td><font size= 4><a href=indexuniquegoods.htm>Home</a></td>
+<td><font size= 4><a href=uniquegoodsoverview.htm>Business Overview</a></td>
+<td><font size= 4><a href=uniquesgoodsproducts.htm>Products</a></td>
+<td><font size= 4><a href=uniquegoodsoffers.htm>Special Offers</a></td>
+<td><font size= 4><a href=uniquegoodsorderform.htm>Order Form</a></td>
+</tr>
+</table>
+
+<font color=white><font size=3>
+<script>
+function validateText(dessertForm)
+{
+if (dessertForm.name.value == "")
+{
+return false;
+}
+if (dessertForm.address.value == "")
+{
+return false;
+}
+if (dessertForm.city.value == "")
+{
+return false;
+}
+if (dessertForm.phone.value == "")
+{
+return false;
+}
+return true;
+}
+
+function doSubmit(dessertForm)
+{
+if (validateText(dessertForm) == false)
+{
+alert("Required data missing in Step 1");
+return;
+}
+alert("Your dessert order has been submitted!");
+return;
+}
+
+function doClear(dessertForm)
+{
+dessertForm.name.value = "";
+dessertForm.address.value = "";
+dessertForm.city.value = "";
+dessertForm.state.value = "";
+dessertForm.zip.value = "";
+dessertForm.phone.value = "";
+dessertForm.dessert[0].checked = false;
+dessertForm.dessert[1].checked = false;
+dessertForm.dessert[2].checked = false;
+dessertForm.number[0].checked = false;
+dessertForm.number[1].checked = false;
+dessertForm.number[2].checked = false;
+dessertForm.number[3].checked = false;
+dessertForm.number[4].checked = false;
+dessertForm.number[5].checked = false;
+dessertForm.number[6].checked = false;
+dessertForm.number[7].checked = false;
+dessertForm.number[8].checked = false;
+dessertForm.number[9].checked = false;
+return;
+}
+</script>
+</head>
+<Form name="dessertForm">
+<br>
+<h4>Step 1: Enter your name, address, and phone number:</h4>
+<font face= "courier">
+Name: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=30 name="name"><br>
+Address: &nbsp;<input type="text" size=30 name="address"><br>
+City: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=30 name="city"><br>
+State: &nbsp;&nbsp;&nbsp;<input type="text" size=30 name="state"><br>
+Zip Code: <input type="text" size=30 name="zip"><br>
+Phone:  &nbsp;&nbsp;&nbsp;<input type="text" size=30 name="phone"><br>
+</font>
+<br>
+<br>
+<h4>Step 2: Select the type of dessert you want:</h4>
+<font face="courier">
+<input type="checkbox" Name="dessert">Cake
+<input type="checkbox" Name="dessert">Brownie
+<input type="checkbox" Name="dessert">Rice Krispie<br>
+</font>
+<br>
+<br>
+<h4>Step 3: Select the number of this dessert you want:</h4>
+<font face= "courier">
+<input type="radio" name="number">1
+<input type="radio" name="number">2
+<input type="radio" name="number">3
+<input type="radio" name="number">4
+<input type="radio" name="number">5<br>
+<input type="radio" name="number">6
+<input type="radio" name="number">7
+<input type="radio" name="number">8
+<input type="radio" name="number">9
+<input type="radio" name="number">10
+</font>
+<br>
+<Br>
+<input type="button" value="Submit order" onClick="doSubmit(dessertForm);">
+<input type="button" value ="Clear entries"
+onClick="doClear(dessertForm);">
+</form>
+
+<br><br><br><br>
+<font size=2><font color=white>
+<SCRIPT>
+
+	lastModDate = new Date (document.lastModified)
+	document.write ("<B><I>Last Updated:</I></B> " + lastModDate)
+</SCRIPT>
+<br>
+&copy Copyright Unique Goods.    Webmaster: Aleia Knight
+</center>
+</body>
+</html>
